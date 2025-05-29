@@ -1,0 +1,7 @@
+To understand the architecture of Kubernetes:
+API Server : acts as front-end for k8. CLI, User, management devices talk to API Servers to interact with Clusters
+etcd: key-value store used by k8 to store all data, used to manage the cluster.
+kubelet : Its an agent that runs on each node in cluster
+Container runtime: it is basically a s/w to run containers (ex: Docker)
+Controller: responsible for responding and noticiing when a node, containers and end-points goes down. Brings up new containers in such cases.
+Scheduler: distributes the work
