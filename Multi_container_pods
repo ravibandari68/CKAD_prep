@@ -1,0 +1,34 @@
+Multi-Container Pods are the pods which runs multiple containers that share the same network and storage volumes.
+
+These are of 3 types:
+a) Sidecar
+b)Adapter
+c) Ambassador
+
+Sample YAML file of the multi-container pod: 
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: multi-container-pod
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx
+      ports:
+        - containerPort: 80
+    - name: busybox-container
+      image: busybox
+      command: ['sh', '-c', 'while true; do echo Sidecar running; sleep 10; done']
+
+This pod runs:
+nginx (main app)
+busybox (sidecar for logging or helper tasks)
+
+All the 3 types were defined as same in YAML file, the only difference is their functionality. 
+
+| Pattern    | Role                                      | Example             |
+| ---------- | ----------------------------------------- | ------------------- |
+| Sidecar    | Add functionality (e.g., logging, config) | Fluentd             |
+| Ambassador | Proxy or connect to external service      | Envoy               |
+| Adapter    | Format or transform app output            | Prometheus exporter |
