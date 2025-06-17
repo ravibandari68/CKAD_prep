@@ -1,4 +1,5 @@
 An acoount used by an application to interact with k8 cluster is a SA.
+
 Ex: Jenkins uses SAs to deploy an application on k8 cluster. 
 
 External Apps uses TOKENS while authenticating kubernetes-API.
@@ -26,6 +27,7 @@ spec:
 ```
 
 requests: Minimum guaranteed resources (used by scheduler).
+
 limits: Maximum allowed resources (enforced at runtime).
 
 Note: A pod cannot use more CPU than mentioned (Throttle) but it can use more memory than mentioned in limits. It is where the pod gets terminated with OOM killed (Out Of Memory).
@@ -61,8 +63,8 @@ spec:
 
 You create a LimitRange in a namespace.
 When a pod is created in that namespace:
-> If no requests/limits are defined, defaults are applied.
-> If the pod requests more than the max allowed, it’s rejected.
+-> If no requests/limits are defined, defaults are applied.
+-> If the pod requests more than the max allowed, it’s rejected.
 
 
 requests and limits are pod-level but LimitRange is Namespace level.
