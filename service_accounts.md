@@ -23,6 +23,7 @@ spec:
       limits:
         memory: "256Mi"
         cpu: "500m"
+'''
 
 requests: Minimum guaranteed resources (used by scheduler).
 limits: Maximum allowed resources (enforced at runtime).
