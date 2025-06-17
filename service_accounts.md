@@ -6,6 +6,7 @@ External Apps uses TOKENS while authenticating kubernetes-API.
 Resource requests:
 Kubernetes pod_definition with resource requests and limits:
 
+'''resource_req.yaml
 apiVersion: v1
 kind: Pod
 metadata:
