@@ -31,6 +31,7 @@ limits: Maximum allowed resources (enforced at runtime).
 Note: A pod cannot use more CPU than mentioned (Throttle) but it can use more memory than mentioned in limits. It is where the pod gets terminated with OOM killed (Out Of Memory).
 
 But Now, what if the developer forgets to mention these requests and limits, it is where the concept of LimitRange comes into picture.
+
  
 '''yaml
 
@@ -55,7 +56,7 @@ spec:
     min:
       cpu: 100m
       memory: 64Mi
-
+'''
 
 
 You create a LimitRange in a namespace.
