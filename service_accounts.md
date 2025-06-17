@@ -77,3 +77,13 @@ Note: requests and limits are pod-level but LimitRange is Namespace level.
 <summary>
   Setting hard limits on resources like CPU, Memory, pods, Persistent volumes
 </summary>
+<h4>
+  Uses:
+</h4>
+Prevent one team/project from consuming all cluster resources
+
+Enforce namespace-level resource boundaries
+
+Improve multi-tenancy and cost control
+
+Complement LimitRange (which limits per-pod/container usage)
