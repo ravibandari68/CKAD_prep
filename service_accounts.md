@@ -71,4 +71,9 @@ When a pod is created in that namespace:
 
 Note: requests and limits are pod-level but LimitRange is Namespace level.
 
-
+<H3>
+  Resource Quota :
+</H3>
+<summary>
+  Setting hard limits on resources like CPU, Memory, pods, Persistent volumes
+</summary>
