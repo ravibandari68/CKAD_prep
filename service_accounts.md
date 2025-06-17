@@ -63,10 +63,12 @@ spec:
 
 You create a LimitRange in a namespace.
 When a pod is created in that namespace:
+
 -> If no requests/limits are defined, defaults are applied.
+
 -> If the pod requests more than the max allowed, it’s rejected.
 
 
-requests and limits are pod-level but LimitRange is Namespace level.
+Note: requests and limits are pod-level but LimitRange is Namespace level.
 
 
