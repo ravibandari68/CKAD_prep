@@ -6,7 +6,7 @@ External Apps uses TOKENS while authenticating kubernetes-API.
 Resource requests:
 Kubernetes pod_definition with resource requests and limits:
 
-'''YAML
+```YAML
 
 apiVersion: v1
 kind: Pod
@@ -23,7 +23,7 @@ spec:
       limits:
         memory: "256Mi"
         cpu: "500m"
-'''
+```
 
 requests: Minimum guaranteed resources (used by scheduler).
 limits: Maximum allowed resources (enforced at runtime).
@@ -33,7 +33,7 @@ Note: A pod cannot use more CPU than mentioned (Throttle) but it can use more me
 But Now, what if the developer forgets to mention these requests and limits, it is where the concept of LimitRange comes into picture.
 
  
-'''YAML
+```YAML
 
 ###LimitRange.yaml
 
@@ -56,7 +56,7 @@ spec:
     min:
       cpu: 100m
       memory: 64Mi
-'''
+```
 
 
 You create a LimitRange in a namespace.
