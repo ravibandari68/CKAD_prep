@@ -87,3 +87,20 @@ Enforce namespace-level resource boundaries
 Improve multi-tenancy and cost control
 
 Complement LimitRange (which limits per-pod/container usage)
+
+```YAML
+
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: dev-quota
+  namespace: dev
+spec:
+  hard:
+    requests.cpu: "2"
+    requests.memory: 4Gi
+    limits.cpu: "4"
+    limits.memory: 8Gi
+    pods: "10"
+    persistentvolumeclaims: "5"
+```
