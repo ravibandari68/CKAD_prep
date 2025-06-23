@@ -99,3 +99,9 @@ spec:
 ```
 
 Here, the content-generator container creates an HTML file that the web-server container serves using NGINX. Both containers are integral to the application's functionality and operate collaboratively.
+
+<h3>Init Containers: </h3>
+
+A Pod can have multiple containers running apps within it, but it can also have one or more init containers, which are run before the app containers are started.
+
+> If a Pod's init container fails, the kubelet repeatedly restarts that init container until it succeeds. 
